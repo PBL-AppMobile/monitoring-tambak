@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Toolbar dengan tombol kembali, judul, dan ikon profil -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:padding="10dp"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monitoring"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"/>
+
+                <!-- ImageView untuk Ikon Profil -->
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/img_profile"
+                    android:contentDescription="@string/profile"
+                    android:padding="8dp"
+                    android:onClick="openProfile"
+                    android:background="@drawable/rounded_img"
+                    android:clipToOutline="true"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="20dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingBottom="20dp">
+
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal"
+                       android:gravity="center"
+                       android:layout_marginTop="20dp">
+
+                       <LinearLayout
+                           android:layout_width="150dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <LinearLayout
+                               android:id="@+id/monitoring1"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:orientation="vertical"
+                               android:gravity="center"
+                               android:layout_weight="1"
+                               android:background="@drawable/bg_monitoring1">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="80dp"
+                                   android:text="27k"
+                                   android:gravity="center"
+                                   android:textColor="@color/white"
+                                   android:textSize="20sp"
+                                   android:padding="20dp"/>
+                           </LinearLayout>
+
+                           <LinearLayout
+                               android:id="@+id/monitoring2"
+                               android:layout_width="match_parent"
+                               android:layout_height="80dp"
+                               android:orientation="vertical"
+                               android:layout_marginTop="10dp"
+                               android:background="@drawable/bg_monitoring2"
+                               android:clipChildren="false"
+                               android:clipToPadding="false">
+
+                               <TextView
+                                   android:layout_width="match_parent"
+                                   android:layout_height="match_parent"
+
+                                   android:gravity="center"
+                                   android:padding="20dp"
+                                   android:text="14%"
+                                   android:textColor="@color/white"
+                                   android:textSize="20sp" />
+
+                               <ImageView
+                                   android:id="@+id/myImageView"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="25dp"
+                                   android:layout_marginTop="-25dp"
+                                   android:background="@drawable/rounded_icon"
+                                   android:scaleType="fitXY"
+                                   android:src="@drawable/image" />
+                           </LinearLayout>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:id="@+id/monitoring3"
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:orientation="horizontal"
+                           android:layout_weight="1"
+                           android:gravity="center"
+                           android:layout_marginStart="10dp"
+                           android:background="@drawable/bg_monitoring3">
+
+                           <ImageView
+                               android:layout_width="50dp"
+                               android:layout_height="50dp"
+                               android:src="@drawable/ic_suhu"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="14%"
+                               android:gravity="center"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="20sp"
+                               android:padding="20dp"/>
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+
+
+               </LinearLayout>
+
+               <!-- LineChart untuk monitoring pH -->
+               <com.github.mikephil.charting.charts.LineChart
+                   android:id="@+id/lineChartPh"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp" />
+
+               <!-- LineChart untuk monitoring suhu air -->
+               <com.github.mikephil.charting.charts.LineChart
+                   android:id="@+id/lineChartSuhuAir"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp" />
+
+               <!-- LineChart untuk monitoring kualitas air -->
+               <com.github.mikephil.charting.charts.LineChart
+                   android:id="@+id/lineChartSalinity"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp" />
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

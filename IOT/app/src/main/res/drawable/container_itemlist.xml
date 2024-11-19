@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow layer -->
+    <item>
+        <shape>
+            <solid android:color="#40000000"/> <!-- Warna bayangan (abu-abu dengan transparansi) -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+    <!-- Main background layer -->
+    <item android:top="0dp" android:left="0dp" android:right="1dp" android:bottom="2dp">
+        <shape>
+            <solid android:color="@color/white"/> <!-- Warna utama (putih) -->
+            <corners android:radius="10dp"/>
+        </shape>
+    </item>
+
+</layer-list>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/ActiveTextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/InactiveTextStyle</item>
+    </style>
+
+    <style name="ActiveTextStyle">
+        <item name="android:textColor">@color/colorPrimary</item> <!-- Mengatur warna teks aktif -->
+        <item name="android:iconTint">@color/colorPrimary</item> <!-- Mengatur warna ikon aktif -->
+    </style>
+
+    <style name="InactiveTextStyle">
+        <item name="android:textColor">@color/colorPrimary</item> <!-- Mengatur warna teks non-aktif -->
+        <item name="android:iconTint">@color/colorPrimary</item> <!-- Mengatur warna ikon non-aktif -->
+    </style>
+
+    <!-- Tema aplikasi tanpa ActionBar -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <!-- Gaya untuk Toolbar -->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/blue</item>
+        <item name="android:titleTextColor">@android:color/white</item>
+    </style>
+
+</resources>

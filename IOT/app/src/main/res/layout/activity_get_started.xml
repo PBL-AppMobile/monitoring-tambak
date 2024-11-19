@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    app:flow_horizontalAlign="center">
+
+    <ImageView
+        android:layout_width="252dp"
+        android:layout_height="204dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/splash" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Monitoring Sensor"
+        android:textAlignment="center"
+        android:textColor="@color/jinggatulisan"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="@string/startDesc"
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/jinggatulisan"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Get Started"
+        android:padding="8dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:backgroundTint="@color/jingga"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        app:cornerRadius = "18dp"/>
+
+</LinearLayout>

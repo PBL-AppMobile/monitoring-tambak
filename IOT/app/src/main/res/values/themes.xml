@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.IOT" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/white</item> <!-- Warna utama -->
+        <item name="colorOnPrimary">@color/colorPrimary
+        </item> <!-- Warna teks di atas warna utama -->
+        <item name="colorSecondary">@color/colorSecondary</item> <!-- Warna sekunder -->
+        <item name="colorOnSecondary">@color/black</item>->
+        <item name="colorOnBackground">@color/black</item> <!-- Teks di atas latar belakang -->
+    </style>
+
+    <style name="Theme.IOT" parent="Base.Theme.IOT" />
+</resources>
