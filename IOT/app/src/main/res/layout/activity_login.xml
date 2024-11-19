@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F2F2F2">
+    android:layout_height="match_parent">
 
 
     <ImageView
@@ -58,7 +57,6 @@
             android:padding="12dp"
             android:textSize="18sp"
             android:layout_marginTop="12dp"
-            android:textColor="#9E9E9E"
             android:textColorHint="#9E9E9E"
             android:ems="10"
             android:hint="Enter your Username"
@@ -83,7 +81,6 @@
             android:padding="12dp"
             android:textSize="18sp"
             android:layout_marginTop="12dp"
-            android:textColor="#9E9E9E"
             android:ems="10"
             android:hint="Enter your Password"
             android:textColorHint="#9E9E9E"
