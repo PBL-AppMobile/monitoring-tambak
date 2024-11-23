@@ -20,6 +20,12 @@
     <color name="jingga">#C1A481</color>
     <color name="jinggatua">#664925</color>
     <color name="jinggatulisan">#8A5425</color>
+    <color name="toolbarwarna">#DFB585 </color>
+    <color name="toolbarwarna2">#DFB585 </color>
+    <color name="toolbarwarna3">#A4815A</color>
+    <color name="toolbarwarna4">#956D47</color>
+    <color name="thumb_color">#3F83FF</color>
+    <color name="track_color">#B3D4FF</color>
     <!-- Warna utama untuk toolbar dan background -->
     <color name="blue">#2196F3</color>
     <color name="blue_dark">#1976D2</color>
