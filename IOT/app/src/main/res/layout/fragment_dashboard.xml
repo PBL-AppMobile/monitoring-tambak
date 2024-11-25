@@ -5,47 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".DashboardFragment">
 
-    <!-- Toolbar dengan judul dan ikon profil -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/toolbarwarna4"
-        android:padding="10dp"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <!-- Judul Toolbar -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Monitoring"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@color/jinggatua"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="20sp" />
-
-        <!-- Ikon Profil -->
-        <ImageView
-            android:id="@+id/profileIcon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/img_profile"
-            android:contentDescription="@string/profile"
-            android:onClick="openProfile"
-            android:background="@drawable/rounded_img"
-            android:clipToOutline="true" />
-    </androidx.appcompat.widget.Toolbar>
-
     <!-- Konten Utama -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar">
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:id="@+id/contentContainer"
@@ -78,7 +43,7 @@
                         android:layout_width="150dp"
                         android:layout_height="100dp"
                         android:orientation="vertical"
-                        android:background="@drawable/bg_blue_rounded"
+                        android:background="@drawable/bg_jingga_rounded"
                         android:gravity="center"
                         android:padding="8dp"
                         android:layout_marginEnd="8dp">

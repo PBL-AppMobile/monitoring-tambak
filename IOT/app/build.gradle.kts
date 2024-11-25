@@ -54,4 +54,6 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(group = "com.airbnb.android", name = "lottie", version = "6.0.0")
+
+    implementation(libs.datastore.preferences)
 }

@@ -74,13 +74,6 @@ public class DashboardFragment extends Fragment {
         LineChart lineChartSuhuAir = view.findViewById(R.id.lineChartSuhuAir);
         LineChart lineChartKualitasAir = view.findViewById(R.id.lineChartSalinity);
 
-        ImageView profile = view.findViewById(R.id.profileIcon);
-
-        profile.setOnClickListener(view1 -> {
-            Intent profilePage = new Intent(getContext(), ProfileActivity.class);
-            startActivity(profilePage);
-        });
-
 // Contoh data dummy untuk grafik pH
         ArrayList<Entry> phEntries = new ArrayList<>();
         phEntries.add(new Entry(0, 7));

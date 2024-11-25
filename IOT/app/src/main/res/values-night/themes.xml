@@ -2,6 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.IOT" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Warna utama -->
+        <item name="colorOnPrimary">@color/jingga
+        </item> <!-- Warna teks di atas warna utama -->
+        <item name="colorSecondary">@color/colorSecondary</item> <!-- Warna sekunder -->
+        <item name="colorOnSecondary">@color/black</item>->
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
     </style>
 </resources>
