@@ -19,6 +19,9 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.iot.iot.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String THEME_PREFS = "theme_prefs";
+    private static final String IS_DARK_MODE = "is_dark_mode";
+
     private ActivityMainBinding binding;
 
     @Override
@@ -32,22 +35,21 @@ public class MainActivity extends AppCompatActivity {
         binding.toolbar.setTitle("Dashboard");
         setSupportActionBar(binding.toolbar);
 
-        getSupportFragmentManager().beginTransaction().replace(fragment, new DashboardFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new DashboardFragment()).commit();
 
         binding.profileIcon.setOnClickListener(view1 -> {
             Intent profilePage = new Intent(this, ProfileActivity.class);
             startActivity(profilePage);
         });
 
-        binding.ibDarkMode.setOnClickListener(view1 -> {
-            toggleTheme();
-        });
+
 
         binding.bottomNavigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(MenuItem item) {
                 Fragment selectedFragment = null;
+                String title = "";
 
                 if (item.getItemId() == home_nav) {
                     selectedFragment = new DashboardFragment();
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (selectedFragment != null) {
+                    binding.toolbar.setTitle(title);
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment, selectedFragment).commit();
                 }
                 return true;
@@ -69,30 +72,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-    private void toggleTheme() {
-        SharedPreferences preferences = getSharedPreferences("theme_prefs", MODE_PRIVATE);
-        boolean isDarkMode = preferences.getBoolean("is_dark_mode", false);
-
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putBoolean("is_dark_mode", !isDarkMode);
-        editor.apply();
-
-        if (!isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        binding = null;
     }
 
-    private void setThemeFromPreferences() {
-        SharedPreferences preferences = getSharedPreferences("theme_prefs", MODE_PRIVATE);
-        boolean isDarkMode = preferences.getBoolean("is_dark_mode", false);
+    public void setThemeFromPreferences() {
+        SharedPreferences preferences = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
+        boolean isDarkMode = preferences.getBoolean(IS_DARK_MODE, false);
 
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
+        AppCompatDelegate.setDefaultNightMode(
+                isDarkMode ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO
+        );
     }
 }

@@ -17,17 +17,6 @@
         android:padding="10dp"
         app:titleTextColor="@color/white">
 
-        <ImageView
-            android:id="@+id/ib_dark_mode"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end|center_vertical"
-            android:layout_marginEnd="16dp"
-            android:background="@color/transparent"
-            android:contentDescription="@string/dark_mode"
-            android:scaleType="fitCenter"
-            android:src="@drawable/baseline_dark_mode_24" />
-
         <!-- Ikon Profil -->
         <ImageView
             android:id="@+id/profile_icon"
