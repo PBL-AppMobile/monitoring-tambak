@@ -48,12 +48,9 @@
                         android:padding="8dp"
                         android:layout_marginEnd="8dp">
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/phlevel" />
 
                         <TextView
+                            android:id="@+id/tv_ph_level"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -74,6 +71,7 @@
                         android:layout_marginEnd="8dp">
 
                         <TextView
+                            android:id="@+id/tv_water_temp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:fontFamily="@font/poppins_semibold"
@@ -97,7 +95,7 @@
                     <LinearLayout
                         android:layout_width="150dp"
                         android:layout_height="100dp"
-                        android:orientation="vertical"
+                        android:orientation="horizontal"
                         android:background="@drawable/bg_monitoring3"
                         android:gravity="center"
                         android:padding="8dp"
@@ -107,6 +105,16 @@
                             android:layout_width="30dp"
                             android:layout_height="50dp"
                             android:src="@drawable/ic_suhu" />
+
+                        <TextView
+                            android:id="@+id/tv_salt_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Salinity"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:gravity="center" />
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
