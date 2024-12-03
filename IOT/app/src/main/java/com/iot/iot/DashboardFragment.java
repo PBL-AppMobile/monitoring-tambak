@@ -165,7 +165,6 @@ public class DashboardFragment extends Fragment {
     }
 
     private void sendServoCommand(int command) {
-        System.out.println("Servo Command: " + command);
-        // Tambahkan logika kontrol ke server
+//        Kirim data 0 dan 1
     }
 }

@@ -158,19 +158,22 @@
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChartSuhuAir"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
 
             <!-- LineChart untuk monitoring pH -->
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChartPh"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
 
             <!-- LineChart untuk monitoring kualitas air -->
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChartSalinity"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

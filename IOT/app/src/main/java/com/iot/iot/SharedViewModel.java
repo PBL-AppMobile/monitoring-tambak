@@ -80,7 +80,7 @@ public class SharedViewModel extends ViewModel {
                         String time = valueEntry.getString(0);
                         double ph = valueEntry.getDouble(1);
                         double suhuAir = valueEntry.getDouble(2);
-                        double kadarGaram = valueEntry.getDouble(3);
+                        double kadarGaram = valueEntry.getDouble(4);
 
                         dataList.add(new SensorData(time, ph, suhuAir, kadarGaram));
                     }
