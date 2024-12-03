@@ -31,13 +31,14 @@
                 android:layout_height="wrap_content"
                 android:text="Tanggal"
                 android:textStyle="bold"
-                style="@style/TextColor"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/tv_jam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jam"/>
+                android:text="Jam"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ph"
-                    style="@style/TextColor"
+                    android:textColor="@color/black"
                     android:layout_marginEnd="20dp"/>
 
                 <TextView
@@ -58,13 +59,13 @@
                     android:layout_height="wrap_content"
                     android:text="Suhu air"
                     android:layout_marginEnd="20dp"
-                    style="@style/TextColor"/>
+                    android:textColor="@color/black"/>
                 <TextView
                     android:id="@+id/tv_kualitas_air"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kualitas air"
-                    style="@style/TextColor"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
