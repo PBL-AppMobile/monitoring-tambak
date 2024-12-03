@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="Jadwal Pakan"
             android:textSize="10dp"
-            android:textColor="@color/black"/>
+            style="@style/TextColor"/>
 
     </LinearLayout>
 

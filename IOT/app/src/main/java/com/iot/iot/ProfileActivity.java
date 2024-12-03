@@ -1,11 +1,9 @@
 package com.iot.iot;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ImageView;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -17,43 +15,49 @@ public class ProfileActivity extends AppCompatActivity {
     private ActivityProfilesBinding binding;
     private static final String THEME_PREFS = "theme_prefs";
     private static final String IS_DARK_MODE = "is_dark_mode";
+    private boolean isDarkMode; // Status tema saat ini
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Mengatur Binding
         binding = ActivityProfilesBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.ibDarkMode.setOnClickListener(view1 -> {
-            toggleTheme();
+        // Mendapatkan status tema dari SharedPreferences
+        SharedPreferences preferences = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
+        isDarkMode = preferences.getBoolean(IS_DARK_MODE, false);
+
+        // Mengatur tema saat aplikasi dibuka
+        AppCompatDelegate.setDefaultNightMode(
+                isDarkMode ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO
+        );
+
+        // Tombol Dark Mode Toggle
+        binding.ibDarkMode.setOnClickListener(view -> {
+            isDarkMode = !isDarkMode; // Toggle status tema
+
+            // Simpan status ke SharedPreferences
+            preferences.edit()
+                    .putBoolean(IS_DARK_MODE, isDarkMode)
+                    .apply();
+
+            // Terapkan tema
+            AppCompatDelegate.setDefaultNightMode(
+                    isDarkMode ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO
+            );
         });
 
+        // Tombol Kembali
         ImageView btn_back = findViewById(R.id.clickback);
-
         btn_back.setOnClickListener(view -> {
             FragmentManager fragmentManager = getSupportFragmentManager();
             if (fragmentManager.getBackStackEntryCount() > 0) {
                 fragmentManager.popBackStack(); // Kembali ke Fragment sebelumnya
             } else {
-                // Jika tidak ada Fragment di back stack, Anda bisa menutup Activity atau melakukan tindakan lain
                 finish(); // Menutup Activity saat tidak ada Fragment yang tersisa
             }
         });
-
     }
-
-    private void toggleTheme() {
-        SharedPreferences preferences = getSharedPreferences(THEME_PREFS, MODE_PRIVATE);
-        boolean isDarkMode = preferences.getBoolean(IS_DARK_MODE, false);
-
-        preferences.edit()
-                .putBoolean(IS_DARK_MODE, !isDarkMode)
-                .apply();
-
-        AppCompatDelegate.setDefaultNightMode(
-                isDarkMode ? AppCompatDelegate.MODE_NIGHT_NO : AppCompatDelegate.MODE_NIGHT_YES
-        );
-    }
-
-
 }

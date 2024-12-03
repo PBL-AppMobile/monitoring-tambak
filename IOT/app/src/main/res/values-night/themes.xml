@@ -12,4 +12,16 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
     </style>
+
+    <style name="ScreenBackground"><item name="android:background">@color/black</item></style>
+
+    <style name="TextColor"><item name="android:textColor">@color/grey</item></style>
+
+    <style name="Bgcolorriwayat"><item name="android:textColor">@color/darkgrey</item></style>
+
+    <style name="Button">
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
 </resources>
