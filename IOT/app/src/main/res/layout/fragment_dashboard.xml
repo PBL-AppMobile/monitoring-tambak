@@ -48,13 +48,19 @@
                         android:padding="8dp"
                         android:layout_marginEnd="8dp">
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="54dp"
+                            android:src="@drawable/phlevel" />
 
                         <TextView
                             android:id="@+id/tv_ph_level"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
+
                             android:text="Card 1"
+                            android:fontFamily="@font/poppins_semibold"
                             android:textColor="@android:color/white"
                             android:textSize="14sp"
                             android:gravity="center" />
@@ -111,6 +117,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
+                            android:fontFamily="@font/poppins_semibold"
                             android:text="Salinity"
                             android:textColor="@android:color/black"
                             android:textSize="14sp"
