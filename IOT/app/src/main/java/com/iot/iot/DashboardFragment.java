@@ -67,6 +67,15 @@ public class DashboardFragment extends Fragment {
 
         // Mulai polling data
         handler.post(dataFetcher);
+        swBaru.setOnCheckedChangeListener(null); // Hentikan sementara listener
+
+// Ambil status terakhir yang disimpan di SharedPreferences atau dari API
+        boolean isServoOn = getSwitchStatus();
+
+// Hanya set status jika statusnya berbeda
+        if (swBaru.isChecked() != isServoOn) {
+            swBaru.setChecked(isServoOn); // Set status switch sesuai dengan status servo terakhir
+        }
 
         swBaru.setOnCheckedChangeListener((buttonView, isChecked) -> {
             sendServoCommand(isChecked ? 1 : 0);  // Ganti dengan logika yang sesuai
@@ -199,7 +208,6 @@ public class DashboardFragment extends Fragment {
                 tvSaltLevel.setText(String.format("Salt: %.2f%%", salinityEntries.get(0).getY()));
 
 
-
             });
         } catch (Exception e) {
             e.printStackTrace();
@@ -248,7 +256,7 @@ public class DashboardFragment extends Fragment {
         return sharedPreferences.getBoolean("switchStatus", false); // Default ke false jika tidak ada status
     }
 
-    private final  String API_URL_SERVO = "http://10.2.23.178:8086/query?q=SELECT%20*%20FROM%20servo_data%20ORDER%20BY%20time%20DESC%20LIMIT%201&db=pbl_agri";
+    private final String API_URL_SERVO = "http://10.2.23.178:8086/query?q=SELECT%20*%20FROM%20servo_data%20ORDER%20BY%20time%20DESC%20LIMIT%201&db=pbl_agri";
 
     private void sendServoCommand(int command) {
         String API_SEND_URL = "http://10.2.23.178:8086/write?db=pbl_agri";
