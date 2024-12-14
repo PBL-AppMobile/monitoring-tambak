@@ -203,9 +203,9 @@ public class DashboardFragment extends Fragment {
                 updateLineChart(lineChartSuhuAir, suhuEntries, "Suhu Air", Color.RED);
                 updateLineChart(lineChartKualitasAir, salinityEntries, "Kadar Garam", Color.GREEN);
 
-                tvPhLevel.setText(String.format("pH: %.2f", phEntries.get(0).getY()));
-                tvWaterTemp.setText(String.format("Temp: %.2f°C", suhuEntries.get(0).getY()));
-                tvSaltLevel.setText(String.format("Salt: %.2f%%", salinityEntries.get(0).getY()));
+                tvPhLevel.setText(String.format(" %.2f", phEntries.get(0).getY()));
+                tvWaterTemp.setText(String.format(" %.2f°C", suhuEntries.get(0).getY()));
+                tvSaltLevel.setText(String.format(" %.2f%%", salinityEntries.get(0).getY()));
 
 
             });
