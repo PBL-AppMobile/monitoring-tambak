@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow Layer -->
+    <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@android:color/darker_gray"/>
+            <corners android:radius="50dp"/>
+        </shape>
+    </item>
+
+    <!-- Main Shape Layer -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="@color/white"/>
+            <corners android:radius="50dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -28,8 +28,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         SensorData data = dataList.get(position);
 
-        holder.tvTanggal.setText(data.getTimeFormatted());
-        holder.tvJam.setText(data.getTimeFormatted().split(" ")[1]); // Ambil hanya jam
+        // Directly use formatted date and time
+        holder.tvTanggal.setText(data.getFormattedDate());
+        holder.tvJam.setText(data.getFormattedTime());
         holder.tvPh.setText(String.format("pH: %.2f", data.getPh()));
         holder.tvSuhuAir.setText(String.format("Suhu Air: %.2f°C", data.getTemp()));
         holder.tvKualitasAir.setText(String.format("Kadar Garam: %.2f%%", data.getSalinity()));

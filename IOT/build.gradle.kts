@@ -1,5 +1,5 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// build.gradle (root project)
 plugins {
     alias(libs.plugins.android.application) apply false
-
+    // Tambahkan plugin lainnya jika diperlukan
 }

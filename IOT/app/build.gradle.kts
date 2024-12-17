@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.iot.iot"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -35,7 +35,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -44,16 +43,15 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation("com.google.code.gson:gson:2.8.8")
-
     implementation("com.github.PhilJay:MPAndroidChart:v3.0.3")
+    implementation("com.itextpdf:itext7-core:7.2.2")
+    implementation("com.alibaba:easyexcel:3.0.5")
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(group = "com.airbnb.android", name = "lottie", version = "6.0.0")
-
     implementation(libs.datastore.preferences)
 }
+
