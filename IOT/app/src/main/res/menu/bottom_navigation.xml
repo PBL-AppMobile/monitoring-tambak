@@ -2,11 +2,13 @@
     <item
         android:id="@+id/home_nav"
         android:icon="@drawable/ic_home"
-        android:title="Beranda"/>
+        android:title="Beranda"
+        android:iconTint="@color/colorPrimary"/>
 
     <item
         android:id="@+id/jadwal_nav"
         android:icon="@drawable/ic_timelapse"
+        android:iconTint="@color/colorPrimary"
         android:title="Jadwal"/>
 
     <item

@@ -40,7 +40,7 @@ public class JadwalAdapter extends RecyclerView.Adapter<JadwalAdapter.JadwalView
 
         // Set listener untuk switch on/off
         holder.switchCompat.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            jadwal.setActive(isChecked);
+            jadwal.isActive();
             // Tambahkan logika untuk menyimpan status switch jika perlu
         });
 

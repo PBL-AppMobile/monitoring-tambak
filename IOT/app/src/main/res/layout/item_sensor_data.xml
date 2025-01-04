@@ -17,5 +17,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Value"
-        android:textColor="@color/gold"/>
+        android:textColor="@color/thumb_color"/>
 </LinearLayout>

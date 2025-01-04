@@ -13,11 +13,19 @@ public class ModelJadwal {
         this.isActive = isActive;
     }
 
-    public String getHari() { return hari; }
-    public String getJam() { return jam; }
-    public String getKeterangan() { return keterangan; }
-    public boolean isActive() { return isActive; }
+    public String getHari() {
+        return hari;
+    }
 
-    public void setActive(boolean active) { isActive = active; }
+    public String getJam() {
+        return jam;
+    }
+
+    public String getKeterangan() {
+        return keterangan;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
 }
-

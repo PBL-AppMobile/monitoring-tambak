@@ -46,6 +46,7 @@ dependencies {
     implementation("com.github.PhilJay:MPAndroidChart:v3.0.3")
     implementation("com.itextpdf:itext7-core:7.2.2")
     implementation("com.alibaba:easyexcel:3.0.5")
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     testImplementation(libs.junit)

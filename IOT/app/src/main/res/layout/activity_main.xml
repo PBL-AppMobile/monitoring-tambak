@@ -12,10 +12,10 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/toolbarwarna3"
+        android:background="@color/white"
         android:fontFamily="@font/poppins_semibold"
         android:padding="10dp"
-        app:titleTextColor="@color/white">
+        app:titleTextColor="@color/colorPrimary">
 
         <!-- Ikon Profil -->
         <ImageView

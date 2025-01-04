@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.IOT" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/toolbarwarna3</item> <!-- Warna utama -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Warna utama -->
         <item name="colorOnPrimary">@color/white
         </item> <!-- Warna teks di atas warna utama -->
         <item name="colorSecondary">@color/colorSecondary</item> <!-- Warna sekunder -->

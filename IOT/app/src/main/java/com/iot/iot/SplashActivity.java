@@ -38,7 +38,7 @@ public class SplashActivity extends AppCompatActivity {
             }
             startActivity(intent);
             finish(); // Close SplashActivity so the user can't return to it
-        }, 3000); // 3000 milliseconds (3 seconds)
+        }, 1000); // 3000 milliseconds (3 seconds)
     }
 
     public void resetPreferences() {

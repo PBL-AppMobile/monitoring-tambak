@@ -188,8 +188,7 @@ public class DashboardFragment extends Fragment {
                 JSONArray dataRow = valuesArray.getJSONArray(i);
                 float ph = (float) dataRow.getDouble(1);
                 float salinity = (float) dataRow.getDouble(2);
-                float suhu = (float) dataRow.getDouble(4);
-                int servo = dataRow.getInt(3);
+                float suhu = (float) dataRow.getDouble(3);
 
                 phEntries.add(new Entry(i, ph));
                 suhuEntries.add(new Entry(i, suhu));

@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/toolbarwarna3"
+        android:background="@color/colorPrimary"
         android:padding="10dp">
 
         <LinearLayout
@@ -420,6 +420,16 @@
                         android:layout_marginTop="20dp"
                         style="@style/Button"
                         android:text="Simpan Perubahan"/>
+
+                    <!-- Logout Button -->
+                    <Button
+                        android:id="@+id/logoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/colorSecondary"
+                        style="@style/Button"
+                        android:text="Logout"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

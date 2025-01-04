@@ -21,12 +21,16 @@
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryDark">@color/blue_dark</item>
         <item name="colorAccent">@color/blue</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
 
     <!-- Gaya untuk Toolbar -->
     <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/blue</item>
         <item name="android:titleTextColor">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
     </style>
 
 </resources>
